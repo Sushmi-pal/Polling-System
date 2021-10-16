@@ -1,10 +1,5 @@
-<html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-    <title>Add opinion</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('content')
 <form method="post" action="{{route('user.store')}}">
     @csrf
     @for($i=1; $i<=count($q); $i++)
@@ -21,6 +16,5 @@
     @endfor
     <button type="submit">Submit</button>
 </form>
-</body>
-</html>
+@endsection
 

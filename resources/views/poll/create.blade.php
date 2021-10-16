@@ -1,15 +1,6 @@
-<html>
-@if($errors)
-    @foreach ($errors->all() as $error)
-        <div>{{ $error }}</div>
-    @endforeach
-@endif
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-    <title>Create your poll</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('content')
+    <div id="contain">
 <form id="AddForm" name="addForm" method="post" action="{{route('poll.store')}}">
     @csrf
     <h3>Question</h3>
@@ -23,5 +14,5 @@
 </form>
 <script src="{{asset('js/create_poll.js')}}">
 </script>
-</body>
-</html>
+    </div>
+@endsection
