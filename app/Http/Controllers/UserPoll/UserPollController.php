@@ -19,7 +19,8 @@ class UserPollController extends Controller
      */
     public function index()
     {
-        //
+        $que=Question::all();
+        return view('poll.show', compact('que'));
     }
 
     /**

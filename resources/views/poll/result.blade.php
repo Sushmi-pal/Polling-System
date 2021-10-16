@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('content')
 @for($i=0; $i<count($a); $i++)
     {{$opt[$i]->name}}
     {{($a[$i]/$row)*100}}
     <br>
 @endfor
-</body>
-</html>
+@endsection

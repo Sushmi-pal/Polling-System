@@ -1,10 +1,5 @@
-<html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-    <title>View your poll</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('content')
 @for($i=1; $i<=count($q); $i++)
     {{$i}}.
     {{$q[$i-1]['name']}}<br>
@@ -18,6 +13,5 @@
     @endforeach<br>
     @endfor
     </form>
-</body>
-</html>
+@endsection
 
